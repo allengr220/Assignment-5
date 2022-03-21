@@ -116,9 +116,10 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
        var insertableChosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-       var thing = homeHtml.getElemntByTag('a').secondItem.innerHTML;
-          insertProperty(thing, randomCategoryShortName, insertableChosenCategoryShortName);
-          homeHtml.getElemntByTag('a').secondItem.innerHTML = thing;
+       var thing = homeHtml.querySelectorAll('a');
+       var thing2 = thing.item(1).innerHTML;
+          insertProperty(thing2, randomCategoryShortName, insertableChosenCategoryShortName);
+          homeHtml.querySelectorAll('a').item(1).innerHTML = thing2;
 
        //var homeHtmlToInsertIntoMainPage =
 
