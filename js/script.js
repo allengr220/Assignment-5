@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowCategoriesHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowCategoriesHTML, // ***** <---- TODO: STEP 1: Substitute  ******
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -116,9 +116,12 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
        var insertableChosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-      
-       var homeHtmlToInsertIntoMainPage =
-          insertProperty(homeHtml, randomCategoryShortName, insertableChosenCategoryShortName);
+       var thing = homeHtml.querySelectorAll('a').item(1).getAttribute('onclick');
+          insertProperty(thing, randomCategoryShortName, insertableChosenCategoryShortName);
+          homeHtml.querySelectorAll('a').item(1).setAttribute('onclick', thing);
+
+       //var homeHtmlToInsertIntoMainPage =
+
 
 
 
@@ -126,8 +129,8 @@ function buildAndShowHomeHTML (categories) {
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
       // ....
-      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
-
+      //insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      insertHtml("#main-content", homeHtml);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
