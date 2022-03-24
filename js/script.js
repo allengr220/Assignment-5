@@ -116,8 +116,9 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
        var insertableChosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+       var stringLoadMenuItem = "randomCategoryShortName";
        var thing = document.querySelectorAll('a').item(1).getAttribute('onclick');
-          insertProperty(thing, randomCategoryShortName, insertableChosenCategoryShortName);
+          insertProperty(thing, stringLoadMenuItem, insertableChosenCategoryShortName);
           document.querySelectorAll('a').item(1).setAttribute('onclick', thing);
 
        //var homeHtmlToInsertIntoMainPage =
