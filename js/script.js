@@ -38,10 +38,11 @@ var showLoading = function (selector) {
 
 // Return substitute of '{{propName}}'
 // with propValue in given 'string'
-//var insertProperty = function (string, propName, propValue) {
-  //var propToReplace = "{{" + propName + "}}";
-  //var string2 = string.replace(propToReplace, propValue);
-  //return string2;
+var insertProperty = function (string, propName, propValue) {
+var propToReplace = "{{" + propName + "}}";
+string = string
+  .replace(new RegExp(propToReplace, "g"), propValue);
+return string;
 };
 
 // Remove the class 'active' from home and switch to Menu button
