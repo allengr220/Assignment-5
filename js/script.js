@@ -38,10 +38,10 @@ var showLoading = function (selector) {
 
 // Return substitute of '{{propName}}'
 // with propValue in given 'string'
-var insertProperty = function (string, propName, propValue) {
-  var propToReplace = "{{" + propName + "}}";
-  var string2 = string.replace(propToReplace, propValue);
-  return string2;
+//var insertProperty = function (string, propName, propValue) {
+  //var propToReplace = "{{" + propName + "}}";
+  //var string2 = string.replace(propToReplace, propValue);
+  //return string2;
 };
 
 // Remove the class 'active' from home and switch to Menu button
@@ -115,10 +115,11 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
        var insertableChosenCategoryShortName = "'L'";
-       var stringLoadMenuItem = "randomCategoryShortName";
+       var stringLoadMenuItem = "{{randomCategoryShortName}}";
        var string = document.querySelectorAll('a').item(1).getAttribute('onclick');
-          insertProperty(string, stringLoadMenuItem, insertableChosenCategoryShortName);
-          document.querySelectorAll('a').item(1).setAttribute('onclick', string);
+          //insertProperty(string, stringLoadMenuItem, insertableChosenCategoryShortName);
+var string2 = string.replace(stringLoadMenuItem, insertableChosenCategoryShortName);
+          document.querySelectorAll('a').item(1).setAttribute('onclick', string2);
 
        //var homeHtmlToInsertIntoMainPage =
 
