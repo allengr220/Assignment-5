@@ -40,8 +40,7 @@ var showLoading = function (selector) {
 // with propValue in given 'string'
 var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
-  string = string
-    .replace(propToReplace, propValue);
+  string = string.replace(propToReplace, propValue);
   return string;
 };
 
