@@ -114,7 +114,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-       var insertableChosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+       var insertableChosenCategoryShortName = "'" + "L" + "'";
        var stringLoadMenuItem = "randomCategoryShortName";
        var thing = document.querySelectorAll('a').item(1).getAttribute('onclick');
           insertProperty(thing, stringLoadMenuItem, insertableChosenCategoryShortName);
