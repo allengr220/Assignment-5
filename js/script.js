@@ -117,10 +117,10 @@ function buildAndShowHomeHTML (categories) {
       //
        var insertableChosenCategoryShortName = "'L'";
        var stringLoadMenuItem = "{{randomCategoryShortName}}";
-       var thing = document.querySelectorAll('a').item(1).getAttribute('onclick');
+       var thing = homeHtml.querySelectorAll('a').item(1).getAttribute('onclick');
           //insertProperty(string, stringLoadMenuItem, insertableChosenCategoryShortName);
 var thing2 = thing.replace(stringLoadMenuItem, insertableChosenCategoryShortName);
-          document.querySelectorAll('a').item(1).setAttribute('onclick', thing2);
+          homeHtml.querySelectorAll('a').item(1).setAttribute('onclick', thing2);
 
        //var homeHtmlToInsertIntoMainPage =
 
