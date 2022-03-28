@@ -118,11 +118,11 @@ console.log(chosenCategoryShortName);
        var html = homeHtml;
        var insertableChosenCategoryShortName = "'L'";
        var stringLoadMenuItem = "{{randomCategoryShortName}}";
-       var thing = html.querySelectorAll('a').item(1).getAttribute('onclick');
+       var thing = document.querySelectorAll('a').item(1).getAttribute('onclick');
           insertProperty(thing, stringLoadMenuItem, insertableChosenCategoryShortName);
 
 
-       var homeHtmlToInsertIntoMainPage = html.querySelectorAll('a').item(1).setAttribute('onclick', thing);
+       var homeHtmlToInsertIntoMainPage = document.querySelectorAll('a').item(1).setAttribute('onclick', thing);
 
 
 
