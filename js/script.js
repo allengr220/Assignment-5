@@ -4,7 +4,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   $("#navbarToggle").blur(function (event) {
     var screenWidth = window.innerWidth;
     if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
+      $("#collapsable-nav").collapse("hide");
     }
   });
 });
@@ -116,14 +116,14 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
 
-       var insertableChosenCategoryShortName = "\"chosenCategoryShortName\"";
+       var insertableChosenCategoryShortName = "'chosenCategoryShortName'";
        var stringLoadMenuItem = "randomCategoryShortName";
-       var thing = document.querySelectorAll('a').item(1).getAttribute('onclick');
+       var thing = window.querySelectorAll("a").item(1).getAttribute("onclick");
        console.log(thing);
           insertProperty(thing, stringLoadMenuItem, insertableChosenCategoryShortName);
 console.log(thing);
 
-       var homeHtmlToInsertIntoMainPage = document.querySelectorAll('a').item(1).setAttribute('onclick', thing);
+       var homeHtmlToInsertIntoMainPage = window.querySelectorAll("a").item(1).setAttribute("onclick", thing);
 
 
 
