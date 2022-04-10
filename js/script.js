@@ -123,7 +123,7 @@ function buildAndShowHomeHTML (categories) {
           insertProperty(homeHtml, stringLoadMenuItem, insertableChosenCategoryShortName);
 //console.log(thing);
 
-       var homeHtmlToInsertIntoMainPage = document.querySelectorAll("a").item(1).setAttribute("onclick", homeHtml);
+       var homeHtmlToInsertIntoMainPage = homeHtml;
 
 
 
