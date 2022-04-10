@@ -118,12 +118,9 @@ function buildAndShowHomeHTML (categories) {
 
        var insertableChosenCategoryShortName = "'"+chosenCategoryShortName+"'";
        var stringLoadMenuItem = "randomCategoryShortName";
-       //var thing = window.querySelectorAll("a").item(1).getAttribute("onclick");
-       //console.log(thing);
-          insertProperty(homeHtml, stringLoadMenuItem, insertableChosenCategoryShortName);
-//console.log(thing);
-
-       var homeHtmlToInsertIntoMainPage = homeHtml;
+      
+       var homeHtmlToInsertIntoMainPage =
+       insertProperty(homeHtml, stringLoadMenuItem, insertableChosenCategoryShortName);;
 
 
 
