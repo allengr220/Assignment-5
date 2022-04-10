@@ -118,12 +118,12 @@ function buildAndShowHomeHTML (categories) {
 
        var insertableChosenCategoryShortName = "'chosenCategoryShortName'";
        var stringLoadMenuItem = "randomCategoryShortName";
-       var thing = this.querySelectorAll("a").item(1).getAttribute("onclick");
+       var thing = document.querySelectorAll("a").item(1).getAttribute("onclick");
        console.log(thing);
           insertProperty(thing, stringLoadMenuItem, insertableChosenCategoryShortName);
 console.log(thing);
 
-       var homeHtmlToInsertIntoMainPage = this.querySelectorAll("a").item(1).setAttribute("onclick", thing);
+       var homeHtmlToInsertIntoMainPage = document.querySelectorAll("a").item(1).setAttribute("onclick", thing);
 
 
 
